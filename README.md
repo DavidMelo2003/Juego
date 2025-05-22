@@ -34,12 +34,11 @@
     ```bash
     pip install pygame
     ```
-3.  Navega al directorio del proyecto en tu terminal.
+3.  Navega al directorio del proyecto en el terminal.
 4.  Ejecuta el juego:
     ```bash
-    python eco_guardian_mk2.py
+    python eco_guardian_mk3.py
     ```
-    (Reemplaza `eco_guardian_mk2.py` con el nombre de tu script principal si es diferente).
 
 ## Cómo Jugar (Usando Docker)
 
@@ -52,20 +51,19 @@
 2.  Navega al directorio del proyecto en tu terminal.
 3.  Construye la imagen Docker:
     ```bash
-    docker build -t nombre-de-tu-juego .
+    docker build -t eco-guardian-mk3 .
     ```
-    (Ej: `docker build -t eco-guardian-mk2 .`)
 
-4.  Ejecuta el contenedor (los comandos varían ligeramente según tu SO):
+4.  Ejecuta el contenedor:
         ```bash
         xhost +local:docker
-        docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix nombre-de-tu-juego
+        docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix eco-guardian-mk3
         ```
     
 si existe algun problema con el audio usar:
          ```bash
         xhost +local:docker
-        docker run -it --rm -e DISPLAY=$DISPLAY -e SDL_AUDIODRIVER=dummy  -v /tmp/.X11-unix:/tmp/.X11-unix nombre-de-tu-juego
+        docker run -it --rm -e DISPLAY=$DISPLAY -e SDL_AUDIODRIVER=dummy  -v /tmp/.X11-unix:/tmp/.X11-unix eco-guardian-mk3
         ```
 
 **Controles del Juego:**
