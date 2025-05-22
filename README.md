@@ -1,4 +1,4 @@
-# Eco-Guardián Espacial MK.II (o el nombre de tu juego)
+# Eco-Guardián Espacial MK.III
 
 ## Descripción
 "Eco-Guardián Espacial MK.III" es un juego de disparos espaciales desarrollado en Pygame. El jugador controla una nave espacial con el objetivo de defenderse de oleadas de naves enemigas. A medida que el jugador avanza, la dificultad aumenta con enemigos más rápidos y en mayor número. ¡Recolecta power-ups para mejorar tu cadencia de fuego y sobrevive el mayor tiempo posible!
