@@ -57,30 +57,15 @@
     (Ej: `docker build -t eco-guardian-mk2 .`)
 
 4.  Ejecuta el contenedor (los comandos varían ligeramente según tu SO):
-
-    *   **En Linux:**
         ```bash
         xhost +local:docker
         docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix nombre-de-tu-juego
         ```
-
-    *   **En macOS (con XQuartz instalado y ejecutándose):**
-        Abre XQuartz. En una terminal de XQuartz, obtén tu IP (ej: `ipconfig getifaddr en0` o `en1` para Wi-Fi).
-        Luego, permite conexiones desde esa IP: `xhost +TU_DIRECCION_IP`
-        ```bash
-        docker run -it --rm -e DISPLAY=TU_DIRECCION_IP:0 nombre-de-tu-juego
+si existe algun problema con el audio usar:
+         ```bash
+        xhost +local:docker
+        docker run -it --rm -e DISPLAY=$DISPLAY -e SDL_AUDIODRIVER=dummy  -v /tmp/.X11-unix:/tmp/.X11-unix nombre-de-tu-juego
         ```
-        (Reemplaza `TU_DIRECCION_IP` con la IP de tu Mac, ej: `192.168.1.10:0`)
-
-    *   **En Windows (con WSL y un servidor X como VcXsrv o X410 ejecutándose):**
-        Asegúrate de que tu servidor X esté configurado para permitir conexiones.
-        Dentro de tu terminal WSL:
-        ```bash
-        export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0 
-        # O para WSL2 a veces es: export DISPLAY=$(hostname).local:0
-        docker run -it --rm -e DISPLAY=$DISPLAY nombre-de-tu-juego
-        ```
-        *Nota: Para WSL2 y VcXsrv, a menudo necesitas deshabilitar el control de acceso en VcXsrv (ej. con `vcxsrv.exe :0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl`) o configurar correctamente el firewall.*
 
 **Controles del Juego:**
 *   **Flechas Izquierda/Derecha:** Mover la nave.
