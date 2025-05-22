@@ -86,10 +86,3 @@
 *   **Flechas Izquierda/Derecha:** Mover la nave.
 *   **Espacio:** Disparar.
 *   **ESC:** Salir del juego.
-
-## Créditos y Personalización
-Este juego es una personalización del proyecto base proporcionado para la actividad de "Inicios IOT", basado en la versión "MK.II".
-*   **Desarrollador:** [Tu Nombre/Alias]
-*   **Assets:** [Menciona si usaste assets de alguna fuente específica, ej: "Assets de OpenGameArt.org y Kenney.nl, modificados por mí", o "Todos los assets creados por [Tu Nombre/Alias]"]
-
----
