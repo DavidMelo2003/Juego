@@ -61,6 +61,7 @@
         xhost +local:docker
         docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix nombre-de-tu-juego
         ```
+    
 si existe algun problema con el audio usar:
          ```bash
         xhost +local:docker
